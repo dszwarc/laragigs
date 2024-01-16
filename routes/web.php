@@ -24,8 +24,11 @@ Route::get('/', function () {
 });
 
 // Route for single listing. Use {id} to search for listing ID with model in database and return listing
-Route::get('/listings/{id}', function($id){
-    return view('listing', [
-        'listing' => Listing::find($id)
-    ]);
+Route::get('/listings/{listing}', function(Listing $listing){
+
+    if ($listing){
+        return view('listing', [
+            'listing' => $listing
+        ]);
+    } 
 });
