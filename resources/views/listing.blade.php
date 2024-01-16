@@ -1,3 +1,7 @@
+@extends('layout')
+
+
+@section('content')
 <h1>LaraGigs</h1>
 
 
@@ -8,4 +12,4 @@
         {{ $listing['description']}}
     </p>
 
-    
+@endsection
